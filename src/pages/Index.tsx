@@ -167,8 +167,15 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 py-4 px-6 text-center text-xs text-muted-foreground">
-        TokenTrend — Krypton Ridge V1 · Not financial advice · Data via CoinGecko
+      <footer className="border-t border-border/50 py-6 px-6 text-center text-sm text-muted-foreground space-y-1">
+        <p>
+          Made with <span className="text-chart-down">❤️</span> and <span className="font-mono text-primary">&lt;/&gt;</span> by{" "}
+          <span className="text-foreground font-semibold">Shreyasi</span>,{" "}
+          <span className="text-foreground font-semibold">Sahil</span>,{" "}
+          <span className="text-foreground font-semibold">Aditya</span> &{" "}
+          <span className="text-foreground font-semibold">Achal</span>
+        </p>
+        <p className="text-xs">TokenTrend — Krypton Ridge V1 · Not financial advice · Data via CoinGecko</p>
       </footer>
     </div>
   );
