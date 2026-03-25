@@ -64,26 +64,30 @@ const Index = () => {
             key={selectedCoin}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-4"
+            className="flex items-center gap-5"
           >
             {coinData && (
-              <img src={coinData.image} alt={coinData.name} className="w-10 h-10 rounded-full" />
+              <div className="w-14 h-14 rounded-2xl bg-secondary/80 border border-border/50 flex items-center justify-center glow-green-sm">
+                <img src={coinData.image} alt={coinData.name} className="w-9 h-9" />
+              </div>
             )}
             <div>
-              <h1 className="text-2xl font-bold font-display">
-                {coinMeta.symbol}/USD
-              </h1>
-              {coinData && (
-                <div className="flex items-center gap-2 mt-0.5">
-                  <span className="text-3xl font-bold font-mono">
-                    ${coinData.current_price.toLocaleString(undefined, { maximumFractionDigits: 2 })}
-                  </span>
-                  <span className={`text-sm font-mono px-2 py-0.5 rounded-full ${
+              <div className="flex items-center gap-2">
+                <h1 className="text-2xl font-bold font-display">
+                  {coinMeta.symbol}/USD
+                </h1>
+                {coinData && (
+                  <span className={`text-xs font-mono px-2 py-0.5 rounded-full ${
                     isUp ? "bg-chart-up/15 text-chart-up" : "bg-chart-down/15 text-chart-down"
                   }`}>
-                    {isUp ? "+" : ""}{coinData.price_change_percentage_24h.toFixed(2)}% today
+                    {isUp ? "+" : ""}{coinData.price_change_percentage_24h.toFixed(2)}%
                   </span>
-                </div>
+                )}
+              </div>
+              {coinData && (
+                <span className="text-3xl font-bold font-mono">
+                  ${coinData.current_price.toLocaleString(undefined, { maximumFractionDigits: 2 })}
+                </span>
               )}
             </div>
           </motion.div>
