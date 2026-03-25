@@ -16,13 +16,6 @@ const Header = ({ selectedCoin, onSelectCoin }: HeaderProps) => {
         <span className="text-xl font-bold font-display text-gradient">TokenTrend</span>
       </div>
 
-      <nav className="hidden md:flex items-center gap-6">
-        {["Dashboard", "Predictions", "Markets"].map((item) => (
-          <button key={item} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-            {item}
-          </button>
-        ))}
-      </nav>
 
       <div className="flex items-center gap-3">
         <select
