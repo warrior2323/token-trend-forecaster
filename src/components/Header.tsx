@@ -13,7 +13,7 @@ const Header = ({ selectedCoin, onSelectCoin }: HeaderProps) => {
         <div className="w-9 h-9 rounded-lg bg-primary/20 flex items-center justify-center glow-green-sm">
           <TrendingUp className="w-5 h-5 text-primary" />
         </div>
-        <span className="text-xl font-bold font-display text-gradient">TokenTrend</span>
+        <span className="text-xl font-bold font-display text-gradient">Krypton</span>
       </div>
 
 
