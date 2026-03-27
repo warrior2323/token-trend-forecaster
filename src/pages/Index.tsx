@@ -175,7 +175,7 @@ const Index = () => {
           <span className="text-foreground font-semibold">Aditya</span> &{" "}
           <span className="text-foreground font-semibold">Achal</span>
         </p>
-        <p className="text-xs">TokenTrend — Krypton Ridge V1 · Not financial advice · Data via CoinGecko</p>
+        <p className="text-xs">Krypton — Ridge V1 · Not financial advice · Data via CoinGecko</p>
       </footer>
     </div>
   );

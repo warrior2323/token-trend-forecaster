@@ -60,20 +60,6 @@ const PredictionCard = ({ prediction, coinSymbol, loading }: PredictionCardProps
         </div>
       </div>
 
-      <div className="space-y-2 mb-4">
-        <div className="flex justify-between text-xs">
-          <span className="text-muted-foreground">Confidence</span>
-          <span className="font-mono">{prediction.confidence.toFixed(1)}%</span>
-        </div>
-        <div className="w-full h-2 bg-secondary rounded-full overflow-hidden">
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: `${prediction.confidence}%` }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className={`h-full rounded-full ${isUp ? "bg-chart-up" : "bg-chart-down"}`}
-          />
-        </div>
-      </div>
 
       <div className="space-y-1.5">
         <p className="text-xs text-muted-foreground font-semibold mb-2">Feature Weights</p>
